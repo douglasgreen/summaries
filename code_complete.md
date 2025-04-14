@@ -98,4 +98,318 @@ This chapter focuses on the crucial decisions that need to be made specifically 
 
 In essence, the chapter stresses that before diving into coding, teams must make deliberate choices about their primary language, agree on consistent coding conventions, understand the maturity of their technology stack, and select a coherent set of construction practices to guide their work effectively.
 
+## Part II. Creating High-Quality Code
 
+### Chapter 5. Design in Construction
+
+This chapter delves into the crucial activity of **software design**, emphasizing its role *during* the construction phase. Design bridges the gap between requirements and coding, and while it can be a distinct phase, much design work often occurs, formally or informally, during construction, especially on smaller projects or when refining high-level architecture.
+
+**Key concepts covered:**
+
+1.  **Design Challenges:** Design is presented as inherently challenging:
+    *   It's a **"wicked problem"** (needing partial solution to be fully defined).
+    *   It's a **"sloppy"** process involving trial-and-error, mistakes, and uncertainty about when it's "good enough."
+    *   It involves making **tradeoffs** between competing goals (like speed vs. size).
+    *   It's **nondeterministic** (multiple valid solutions exist) and **heuristic** (relying on rules of thumb, not guaranteed algorithms).
+    *   It's **emergent**, evolving through iteration and refinement.
+
+2.  **Key Design Concepts:**
+    *   **Managing Complexity:** This is identified as **Software's Primary Technical Imperative**. Good design aims to minimize both essential (inherent) and accidental (self-inflicted) complexity, making programs intellectually manageable.
+    *   **Desirable Characteristics:** A good design strives for minimal complexity, ease of maintenance, loose coupling, extensibility, reusability, high fan-in, low fan-out, portability, leanness, stratification, and use of standard techniques.
+    *   **Levels of Design:** Design occurs at multiple levels: the entire system, subsystems/packages (crucial for managing complexity via controlled communication), classes, routines, and finally, the internal logic of routines.
+
+3.  **Design Building Blocks (Heuristics):** Skillful design relies on heuristics. Major ones include:
+    *   **Finding Objects:** Identifying real-world and synthetic objects and their relationships.
+    *   **Abstraction:** Focusing on essential qualities while ignoring irrelevant details.
+    *   **Encapsulation:** Hiding the internal details of an object, exposing only a defined interface.
+    *   **Information Hiding:** A core principle involving hiding design decisions ("secrets") within a module (class, routine) to isolate complexity and sources of change. Asking "What should I hide?" is a powerful design tool.
+    *   **Identifying Areas Likely to Change:** Isolating potential volatility (business rules, hardware dependencies, I/O, etc.) to minimize the impact of future changes.
+    *   **Loose Coupling:** Minimizing dependencies between modules (classes/routines) for better flexibility and maintainability. Avoid semantic coupling.
+    *   **Using Design Patterns:** Leveraging proven, named solutions (like Factory, Singleton, Observer) to solve common problems, reduce complexity and errors, and improve communication.
+
+4.  **Design Practices:** Effective ways to conduct design work include:
+    *   **Iteration:** Trying multiple approaches, as the first idea is rarely the best.
+    *   **Divide and Conquer:** Breaking down complex problems.
+    *   **Top-Down and Bottom-Up:** Using both decomposition and composition strategies.
+    *   **Prototyping:** Writing minimal, throwaway code to explore risky or unclear areas.
+    *   **Collaboration:** Working with others (informally, pair programming, reviews) to generate ideas and find flaws.
+    *   **Judging "How Much Design":** Balancing the need for design against analysis paralysis, tailoring the amount and formality based on project factors (size, criticality, team experience, etc.). Avoid the extremes of "design everything" or "design nothing." Aim for "Enough Design Up Front (ENUF)".
+    *   **Capturing Design:** Using practical methods like comments, Wikis, email summaries, digital photos of whiteboards, CRC cards, or UML diagrams, rather than insisting on overly formal documentation.
+
+5.  **Methodology:** The chapter advocates for a pragmatic, flexible approach, warning against dogmatic adherence to any single methodology ("Big Design Up Front" vs. "No Design Up Front"). Design is presented as a practical, heuristic, and iterative activity focused on achieving simplicity and managing complexity.
+
+### Chapter 6. Working Classes
+
+This chapter focuses on the design and implementation of **classes**, which are presented as the primary tool for managing complexity in modern programming. It emphasizes creating high-quality classes by building upon the concept of **Abstract Data Types (ADTs)** and focusing on well-designed interfaces and implementations.
+
+**Key concepts covered:**
+
+1.  **Class Foundations (ADTs):**
+    *   An ADT is a collection of data and the operations on that data. ADTs allow programmers to work with higher-level, real-world entities (like `Employee` or `CoolingSystem`) instead of low-level implementation details (like linked list nodes or raw data structures).
+    *   Benefits of ADTs (and thus classes) include hiding implementation details, localizing changes, creating more informative interfaces, improving performance isolation, making code more obviously correct and self-documenting, avoiding excessive data passing, and working at a higher level of abstraction.
+    *   Classes in object-oriented languages are essentially ADTs plus inheritance and polymorphism.
+
+2.  **Good Class Interfaces:** Creating a good interface is paramount. Key principles include:
+    *   **Good Abstraction:** The interface should represent a single, consistent abstraction (like `Employee`, not `EmployeeAndListContainer`). All public routines should support this abstraction. Services should often come in pairs (e.g., `Enable`/`Disable`). Unrelated information should be moved to other classes. Interfaces should be primarily programmatic, not semantic (relying on hidden rules).
+    *   **Good Encapsulation:** Enforce the abstraction by preventing access to implementation details. Minimize accessibility (use `private` over `public` or `protected`). *Never* expose member data publicly; use accessor routines instead. Hide implementation details (e.g., using the pimpl idiom in C++). Don't make assumptions about users. Avoid friend classes. Favor read-time convenience over write-time convenience. Be wary of semantic violations where client code depends on implementation knowledge. Watch for overly tight coupling.
+
+3.  **Design and Implementation Issues:**
+    *   **Containment ("has a"):** This is the preferred way to implement "has a" relationships (e.g., `Employee` "has a" `Name`). It's generally simpler and safer than inheritance. Be critical of classes with too many data members (more than ~7).
+    *   **Inheritance ("is a"):** Use *only* for true "is a" relationships (Liskov Substitution Principle). Design/document for inheritance or prohibit it. Move common elements high in the hierarchy. Avoid deep inheritance trees (max 2-3 levels is better than 6+). Prefer polymorphism over explicit type checking (e.g., `switch` statements). Make base class data private. Use multiple inheritance very cautiously (mainly for mixins). Inheritance increases complexity, so use it judiciously.
+    *   **Member Functions/Data:** Keep the number of routines per class small. Minimize calls to other classes (fan-out). Minimize indirect calls (Law of Demeter).
+    *   **Constructors:** Initialize all member data. Use private constructors to enforce Singletons. Prefer deep copies over shallow copies unless performance dictates otherwise.
+
+4.  **Reasons to Create a Class:** Classes serve many purposes beyond just modeling real-world objects:
+    *   Model real-world or abstract objects.
+    *   Reduce and isolate complexity.
+    *   Hide implementation details and limit the effect of changes.
+    *   Hide global data.
+    *   Streamline parameter passing.
+    *   Create central points of control.
+    *   Facilitate code reuse and plan for program families.
+    *   Package related operations.
+    *   Accomplish specific refactorings.
+    *   Avoid "god classes," irrelevant classes (data only), and verb-named classes (behavior only).
+
+5.  **Language-Specific Issues:** Details like constructor/destructor behavior, overriding rules, and memory management vary significantly between languages (C++, Java, VB.NET). Programmers need to understand these nuances.
+
+6.  **Beyond Classes (Packages):** Higher-level groupings like packages (in Java or Ada, or simulated via conventions) are needed to manage complexity by grouping related classes and controlling their interactions.
+
+In essence, the chapter provides a comprehensive guide to creating effective classes by focusing on strong abstractions, strict encapsulation, careful use of inheritance and containment, and understanding the many valid reasons for class creation beyond simple real-world modeling. High-quality classes are presented as the fundamental building blocks for managing complexity in software construction.
+
+### Chapter 7. High-Quality Routines
+
+This chapter focuses on the design and implementation of individual **routines** (procedures, functions, methods), arguing that well-designed routines are crucial for program quality, readability, and maintainability. It moves from the class level (Chapter 6) down to the level of individual code units.
+
+**Key concepts covered:**
+
+1.  **Valid Reasons to Create Routines:** Beyond just avoiding duplicate code, routines should be created to:
+    *   **Reduce complexity:** The single most important reason. Hide details so you can focus.
+    *   **Introduce abstractions:** A good name summarizes purpose and improves readability.
+    *   **Avoid duplication:** Saves space, eases modification, improves reliability.
+    *   **Support subclassing:** Short, well-factored routines are easier to override correctly.
+    *   **Hide sequences:** Isolate the order of operations.
+    *   **Hide pointer operations:** Make code safer and easier to read.
+    *   **Improve portability:** Isolate non-standard or platform-dependent code.
+    *   **Simplify complex boolean tests:** Improve readability by putting tests into well-named functions.
+    *   **Improve performance:** Centralize code for easier optimization or rewriting.
+    *   **Isolate complexity and limit effects of changes.**
+    *   **Hide implementation details and global data.**
+    *   **Make central points of control.**
+    *   Even very simple operations often benefit from being put into their own routines for clarity and future flexibility.
+
+2.  **Design at the Routine Level (Cohesion):**
+    *   Focuses on **cohesion**: how closely related the operations within a routine are.
+    *   **Functional cohesion** (doing one and only one thing) is the strongest and most desirable type.
+    *   Other types (sequential, communicational, temporal) are acceptable if used carefully, often by having the routine orchestrate calls to other, more focused routines.
+    *   Procedural, logical (except event handlers), and coincidental cohesion are generally unacceptable and indicate poor design.
+
+3.  **Good Routine Names:**
+    *   A good name clearly describes *everything* the routine does (including side effects).
+    *   Avoid vague verbs (like `Handle`, `Process`).
+    *   Don't differentiate solely by number (`Part1`, `Part2`).
+    *   Make names as long as necessary for clarity.
+    *   **Functions:** Name based on the return value (e.g., `GetCustomerId()`).
+    *   **Procedures:** Use a strong verb-object pair (e.g., `PrintDocument()`). In OO languages, the object often implies the object part (e.g., `document.Print()`).
+    *   Use precise opposites (add/remove, start/stop).
+    *   Establish conventions for common operations (like getting an ID).
+
+4.  **Routine Length:**
+    *   Research is mixed, but routines up to about 100-200 lines seem acceptable and no more error-prone than shorter ones.
+    *   Let factors like cohesion, nesting depth, complexity, and clarity dictate length, not arbitrary limits. Be cautious above 200 lines. Many OO routines (accessors) will naturally be very short.
+
+5.  **Using Routine Parameters:** Interfaces are error-prone. Minimize issues by:
+    *   Ordering parameters consistently (e.g., input -> modify -> output).
+    *   Using all parameters passed in.
+    *   Putting status/error parameters last.
+    *   *Not* using parameters as working variables (use local variables).
+    *   Documenting assumptions (units, ranges, meanings, etc.) or using assertions.
+    *   Limiting parameters to about 7 (use structured data/objects to group related parameters).
+    *   Considering naming conventions for parameter roles (input/modify/output).
+    *   Passing what the routine needs to maintain its abstraction (sometimes specific elements, sometimes the whole object).
+    *   Using named parameters (if available) for clarity, especially with long lists or identical types.
+    *   Ensuring actual parameters match formal parameter types.
+
+6.  **Functions vs. Procedures:**
+    *   Use a **function** only if its primary purpose is to return the value indicated by its name.
+    *   Use a **procedure** otherwise (even if it returns a status code). Returning status via an output parameter often makes code clearer than using the function's return value for status.
+    *   Ensure functions return a valid value under all possible paths. Don't return pointers/references to local data.
+
+7.  **Macros and Inline Routines:**
+    *   Use preprocessor macros for routines only as a last resort; they are risky and obscure code. If used, parenthesize carefully, use curly braces for multiple statements, and consider naming them like routines if they might be replaced by one.
+    *   Use `inline` routines (like in C++) sparingly. They can violate encapsulation and potentially increase code size. Measure performance benefits before using them extensively for optimization.
+
+In essence, this chapter emphasizes that routines are fundamental tools for managing complexity. High-quality routines are characterized by strong functional cohesion, clear descriptive names, appropriate length determined by logic, well-managed parameter lists, and careful consideration of their role as either functions or procedures.
+
+### Chapter 8. Defensive Programming
+
+This chapter advocates for **defensive programming**: the practice of anticipating problems and writing code that functions correctly, or at least fails safely, even when encountering unexpected conditions or invalid inputs. It's like defensive driving—protecting yourself even if problems originate elsewhere.
+
+**Key concepts covered:**
+
+1.  **Protecting from Invalid Inputs:**
+    *   Production software should *not* follow "garbage in, garbage out." Instead, aim for "garbage in, nothing out," "garbage in, error message out," or "no garbage allowed in."
+    *   Check *all* data from external sources (users, files, network) for validity, range, and potential security threats (buffer overflows, SQL injection, etc.).
+    *   Check *all* routine input parameters (data from other internal routines) for validity, as appropriate.
+    *   Decide *how* to handle bad inputs consistently (an architectural decision).
+
+2.  **Assertions:**
+    *   Assertions are checks used during development to verify assumptions about the code's state (e.g., `denominator != 0`). They assert conditions that should *never* be false; if they are false, it indicates a bug.
+    *   Use them to document assumptions (like preconditions and postconditions in Design by Contract) and flush out errors early.
+    *   They are typically compiled out of production code for performance reasons.
+    *   Avoid putting executable code directly inside assertions (use temporary variables).
+    *   For critical systems, consider asserting *and* handling the error in production code for maximum safety.
+    *   If your language lacks built-in assertions, create your own.
+
+3.  **Error-Handling Techniques:** When expected errors (not "never occur" conditions) happen, choose a strategy:
+    *   Return a neutral value (0, empty string, default color).
+    *   Substitute the next valid data (skip corrupted record).
+    *   Return the previous value (last known temperature).
+    *   Substitute the closest legal value (0 for negative speed).
+    *   Log a warning message.
+    *   Return an error code/status (to be handled higher up).
+    *   Call a central error-processing routine/object.
+    *   Display a user-friendly error message (careful not to reveal too much).
+    *   Shut down (for safety-critical applications).
+    *   Handle locally using the best method for that specific context.
+    *   The choice depends on **robustness** (keep running even if inaccurate) vs. **correctness** (never return wrong results, even if it means stopping). This is an architectural decision.
+
+4.  **Exceptions:**
+    *   A mechanism to pass errors up the call stack when a routine encounters something it can't handle locally.
+    *   Use them primarily for truly *exceptional* conditions that shouldn't be ignored. Don't overuse them for normal flow control.
+    *   Handle errors locally if possible; don't use exceptions just to pass the buck.
+    *   Avoid throwing exceptions from constructors/destructors due to complex language rules.
+    *   Throw exceptions at the right level of abstraction (e.g., `EmployeeDataNotAvailable` not `EOFException`).
+    *   Include all relevant context in the exception message.
+    *   Avoid empty `catch` blocks (or document why they're truly needed).
+    *   Know the exceptions thrown by library code.
+    *   Consider a central exception reporter for consistency.
+    *   Standardize exception usage across the project.
+    *   Consider alternatives; exceptions are just one tool for error handling.
+
+5.  **Barricades:**
+    *   A damage-containment strategy. Designate interfaces (often at subsystem or class boundaries) as "barricades."
+    *   Code *outside* the barricade treats data as unsafe and uses robust error handling.
+    *   Code *inside* the barricade assumes data has been sanitized and can use assertions. This clarifies where different error strategies apply.
+    *   Convert external data to proper types immediately upon input.
+
+6.  **Debugging Aids:**
+    *   Use tools during development that might be too slow or resource-intensive for production (e.g., routines that check data structure integrity).
+    *   Introduce aids early.
+    *   Use **offensive programming**: fail hard during development (asserts abort, fill memory/files with junk) to find problems quickly, allowing for graceful handling in production.
+    *   Plan to remove or disable aids for production using version control, preprocessors, or stub routines.
+
+7.  **How Much Defensive Code in Production?:**
+    *   Leave code that checks for *important* errors (where failure is costly).
+    *   Remove checks for *trivial* errors (where failure has minor consequences).
+    *   Remove code that causes *hard crashes* (users need to save work).
+    *   Leave code that helps the program crash *gracefully*.
+    *   Log errors for technical support.
+    *   Ensure any user-visible error messages are friendly and don't aid attackers.
+
+8.  **Balance:** Too much defensive code adds complexity and can contain its own bugs. Be strategic about where defenses are needed most.
+
+In essence, the chapter promotes a proactive approach to errors, urging programmers to anticipate invalid data and unexpected conditions. It provides a toolkit including input validation, assertions, various error-handling strategies (including exceptions), barricades, and debugging aids to build more robust and reliable software.
+
+### Chapter 9. The Pseudocode Programming Process
+
+This chapter details a systematic approach, called the **Pseudocode Programming Process (PPP)**, for constructing individual classes and, more specifically, their constituent routines. It emphasizes a structured, iterative process over ad-hoc coding or "hacking."
+
+**Key concepts covered:**
+
+1.  **Steps in Building Classes and Routines (Overview):**
+    *   Class construction involves iterative steps: general class design (responsibilities, secrets, abstraction, inheritance, interfaces), constructing individual routines, and reviewing/testing the class as a whole.
+    *   Routine construction also involves iterative steps: designing, coding, checking, and cleaning up.
+
+2.  **Pseudocode for Pros:**
+    *   Pseudocode is an informal, English-like notation used for detailed routine design.
+    *   **Effective pseudocode:** Uses precise English, avoids target-language syntax, describes *intent* (what) rather than specific implementation (how), and is detailed enough that coding becomes nearly automatic.
+    *   **Benefits:** Makes reviews easier (can review design before code), supports iterative refinement, makes changes easier (cheaper to change pseudocode than code), and minimizes commenting effort (pseudocode becomes the comments).
+
+3.  **Constructing Routines Using the PPP:** This is the core of the chapter, detailing a step-by-step process:
+    *   **Design the Routine:**
+        *   Check prerequisites (requirements, architecture).
+        *   Define the problem (routine's purpose, inputs, outputs, preconditions, postconditions, information hiding).
+        *   Name the routine clearly and accurately.
+        *   Decide how to test the routine.
+        *   Research existing libraries/algorithms.
+        *   Consider error handling strategy.
+        *   Consider efficiency (usually focusing on clarity first, unless performance is critical).
+        *   Write the pseudocode, starting general and refining until coding seems obvious.
+        *   Think about data needed.
+        *   Check the pseudocode (mentally, with peers).
+        *   Iterate on the pseudocode design, keeping the best version.
+    *   **Code the Routine:**
+        *   Write the routine declaration (header).
+        *   Turn the refined pseudocode into comments.
+        *   Fill in the actual programming language code below each comment/pseudocode line.
+        *   Check if code under any comment has become too complex; if so, factor it into a new routine or refine the pseudocode further (apply PPP recursively).
+    *   **Check the Code:**
+        *   Mentally check the routine for errors (desk check, peer review). Aim for understanding, not just code that "seems to work."
+        *   Compile the routine (preferably after mental checks), using the highest warning levels.
+        *   Step through the code line-by-line in a debugger.
+        *   Test the code using planned test cases (may require scaffolding).
+        *   Remove errors found. Rewrite if overly buggy; don't just patch.
+    *   **Clean Up Leftovers:**
+        *   Check the routine's interface, design quality (cohesion, coupling, defensiveness), variables, statements/logic, layout, and documentation (including removing redundant comments).
+    *   **Repeat as Needed:** Iterate through the process if quality is unsatisfactory.
+
+4.  **Alternatives to the PPP:** While PPP is recommended, other systematic approaches exist:
+    *   **Test-First Development:** Write tests before code.
+    *   **Refactoring:** Improve existing code via small, safe transformations.
+    *   **Design by Contract:** Define routine behavior via preconditions and postconditions.
+    *   **Hacking:** Discouraged as it often leads to rework, forgotten details, and getting stuck. PPP addresses these issues.
+
+In essence, the chapter presents the PPP as a highly effective, structured, yet iterative technique for designing and implementing individual routines. It emphasizes careful thought and refinement in pseudocode *before* committing to programming language code, leading to better designs, easier coding, built-in documentation, and higher-quality routines.
+
+## Part III. Variables
+
+### Chapter 10. General Issues in Using Variables
+
+This chapter covers fundamental best practices for using variables effectively and safely in programming, focusing on issues beyond just choosing a data type. It emphasizes that careful handling of variables is crucial for creating clear, maintainable, and less error-prone code.
+
+**Key concepts covered:**
+
+1.  **Data Literacy:** Programmers need a good understanding of various data types (arrays, lists, trees, stacks, etc.) to choose the right tool for the job. A self-test is provided to gauge familiarity.
+
+2.  **Variable Declarations:**
+    *   **Implicit Declarations:** Discouraged as highly hazardous (leading to typos like `acctNum` vs. `acctNo`). If the language supports it, turn off implicit declarations (e.g., `Option Explicit` in VB). Declare all variables explicitly. Use naming conventions and check compiler cross-references.
+
+3.  **Variable Initialization:** Improper initialization is a major source of bugs.
+    *   Initialize variables when declared, if possible (e.g., `int count = 0;`).
+    *   If not possible, initialize close to the first use (Principle of Proximity).
+    *   Ideally, declare and define (initialize) close to first use.
+    *   Use `final` (Java) or `const` (C++) where possible to prevent later modification.
+    *   Pay special attention to resetting counters/accumulators, especially in loops or routines called multiple times.
+    *   Initialize named constants once (at startup); initialize true variables with executable code near use.
+    *   Use compiler options to initialize variables or warn about uninitialized use.
+    *   Check input parameters for validity.
+    *   Use memory checkers or fill memory with recognizable patterns during development to expose initialization problems.
+
+4.  **Scope:** Refers to how widely a variable is known (its visibility). Minimize scope to improve manageability and reduce errors.
+    *   **Localize References:** Keep the code lines between references to the same variable (its "span") as small as possible.
+    *   **Minimize "Live Time":** Keep the number of lines between the first and last use of a variable as small as possible. Shorter live times improve readability, reduce the window of vulnerability, minimize initialization errors, and facilitate refactoring.
+    *   **General Guidelines:** Initialize loop variables just before the loop; assign values just before use; group related statements; break long routines into smaller ones; start with the most restricted scope (loop -> routine -> private class -> protected class -> package -> global) and expand only if necessary. Restricting scope enhances intellectual manageability over the mere convenience of widespread access.
+
+5.  **Persistence:** Refers to the lifetime of data. Problems arise when assuming data persists longer than it does.
+    *   Use assertions/debug code to check variable values.
+    *   Set variables to "unreasonable" values (e.g., null pointers) after use.
+    *   Assume data *isn't* persistent unless language features guarantee it (like `static`).
+    *   Declare and initialize near use.
+
+6.  **Binding Time:** The point at which a variable is bound to its value (coding time, compile time, load time, object instantiation time, just-in-time).
+    *   Later binding times offer more flexibility but usually increase complexity.
+    *   Use the latest binding time *necessary* for required flexibility, but no later, to manage complexity effectively. (e.g., prefer named constants over magic numbers; read from configuration files only if run-time changes are needed).
+
+7.  **Data Types and Control Structures:** There's a natural correspondence (based on Michael Jackson's work):
+    *   Sequential data -> sequential statements.
+    *   Selective data (use one of several) -> `if`, `case` statements.
+    *   Iterative data (repeated items) -> `for`, `while` loops.
+    *   Structure code to follow the structure of the data it operates on.
+
+8.  **One Variable, One Purpose:**
+    *   Avoid reusing the same variable for unrelated purposes within a routine (use distinct variables).
+    *   Avoid hidden meanings (e.g., `pageCount = -1` means error). Use separate variables (e.g., `pageCount` and `status`).
+    *   Ensure all declared variables are actually used (unused variables correlate with errors).
+
+In essence, the chapter stresses the importance of disciplined variable usage: explicit declaration, careful initialization close to use, minimizing scope (span and live time), understanding persistence, choosing binding time consciously, matching control structures to data, and assigning each variable a single, clear purpose. These practices significantly reduce complexity and prevent common programming errors.
