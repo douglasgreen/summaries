@@ -413,3 +413,173 @@ This chapter covers fundamental best practices for using variables effectively a
     *   Ensure all declared variables are actually used (unused variables correlate with errors).
 
 In essence, the chapter stresses the importance of disciplined variable usage: explicit declaration, careful initialization close to use, minimizing scope (span and live time), understanding persistence, choosing binding time consciously, matching control structures to data, and assigning each variable a single, clear purpose. These practices significantly reduce complexity and prevent common programming errors.
+
+### Chapter 11. The Power of Variable Names
+
+This chapter argues that **good variable names are critically important for code readability, understandability, and maintainability**. Choosing names carefully is a key programming skill, as the variable and its name are essentially intertwined in the reader's mind.
+
+**Key concepts covered:**
+
+1.  **Considerations in Choosing Good Names:**
+    *   **Most Important:** The name must fully and accurately describe the entity the variable represents. Stating the variable's purpose in words often yields the best name.
+    *   **Problem Orientation:** Names should relate to the real-world problem being solved (e.g., `employeeData`) rather than programming constructs (e.g., `inputRec`). Express the "what," not the "how."
+    *   **Optimum Length:** Names should be long enough to be descriptive but not so long they become unwieldy. Research suggests 10-16 characters is often optimal, but clarity is the main goal. Avoid overly short, cryptic names (like `x`, `ntm`) and overly long ones. Use the Goldilocks approach ("just right").
+    *   **Scope:** Shorter names (like `i`, `j`) might be acceptable for variables with very limited scope (e.g., simple loop counters), but longer, descriptive names are better for variables with larger scope (class or global) or those used outside a few lines.
+    *   **Computed-Value Qualifiers:** Place qualifiers like `Total`, `Average`, `Max`, `Min`, `Count`, `Index` at the *end* of the name (e.g., `revenueTotal`, `customerIndex`) for consistency and readability. Avoid ambiguous `Num`; use `Count`/`Total` or `Index`.
+    *   **Opposites:** Use precise, standard opposites (begin/end, min/max, source/target).
+
+2.  **Naming Specific Types of Data:**
+    *   **Loop Indexes:** Use `i`, `j`, `k` only for short, simple loops. Use meaningful names (`recordCount`, `teamIndex`) for longer or nested loops, or if the index is used outside the loop.
+    *   **Status Variables:** Avoid vague names like `flag` or `status`. Use descriptive names like `dataReady`, `error`, `found`, `success`, `processingComplete`. Use enumerated types or named constants for flag values.
+    *   **Temporary Variables:** Avoid names like `temp` or `x`. Give temporary variables meaningful names that reflect their specific, temporary purpose (e.g., `discriminant`, `oldRoot`).
+    *   **Boolean Variables:** Use names that imply true/false (like `done`, `success`, `found`, `error`). Prefixes like `is` (`isDone`, `isFound`) can work but sometimes reduce readability slightly. Use *positive* names (e.g., `found` instead of `notFound`) and negate with operators (`!found`).
+    *   **Enumerated Types:** Use a common prefix or suffix for elements within the same group (e.g., `Color_Red`, `Color_Green`, or `Color.Red`, `Color.Green` if the language supports it).
+    *   **Named Constants:** Name the *abstract entity* represented, not the literal value (e.g., `MAX_ENTRIES` not `FIVE`).
+
+3.  **The Power of Naming Conventions:** Conventions provide structure and reduce cognitive load.
+    *   **Benefits:** Reduce global decisions, aid knowledge transfer, speed up learning new code, reduce name proliferation, compensate for language weaknesses, emphasize relationships.
+    *   **When to Use:** Always beneficial, but especially crucial for teams, long-lived projects, large projects, or maintainable code.
+    *   **Formality:** Tailor the degree of formality to the project size and longevity.
+    *   **Informal Conventions:** Differentiate variable/routine names, class/object names, global/member variables, types/constants/enums. Format for readability (e.g., `camelCase` or `under_scores`).
+    *   **Language-Specific Conventions:** Follow established conventions for the language (C, C++, Java, VB, etc.) when possible, but prioritize cross-language consistency if needed.
+
+4.  **Standardized Prefixes:** (Like Hungarian notation) Can add precision and compactness by combining semantic prefixes (e.g., `c` for count, `i` for index, `p` for pointer) with user-defined type (UDT) abbreviations. Use with caution; don't let prefixes replace a meaningful base name.
+
+5.  **Creating Short Names (If Necessary):** Modern languages rarely require short names. If needed:
+    *   Use standard abbreviations, remove vowels/articles, use first/last letters, truncate consistently, remove suffixes, use significant words.
+    *   Abbreviate *consistently*.
+    *   Create pronounceable names (telephone test).
+    *   Avoid mispronunciations (e.g., `BEND`).
+    *   Use a thesaurus to avoid collisions.
+    *   Document abbreviations (in code comments or a project dictionary).
+
+6.  **Kinds of Names to Avoid:**
+    *   Misleading or ambiguous names.
+    *   Names with similar meanings (e.g., `input` vs. `inputValue`).
+    *   Names that differ only slightly (poor "psychological distance").
+    *   Names that sound similar (homonyms).
+    *   Numerals unless part of the real-world entity (`file1`, `total2`).
+    *   Misspelled words (intentionally or unintentionally).
+    *   Differentiation solely by capitalization.
+    *   Mixed natural languages.
+    *   Reserved words or names of standard types/routines.
+    *   Totally unrelated or silly names.
+    *   Hard-to-read characters (1 vs. l, O vs. 0, etc.).
+
+In essence, this chapter hammers home that variable names are a crucial form of documentation and significantly impact code clarity. Programmers should invest effort in choosing names that are descriptive, unambiguous, appropriately long, problem-oriented, and consistent, using conventions to aid understanding and manageability. Good naming favors read-time convenience over write-time convenience.
+
+### Chapter 12. Fundamental Data Types
+
+This chapter delves into the practical use of the basic building blocks of data in programming: the fundamental data types. It provides guidelines and warnings for using numbers, integers, floating-point numbers, characters, strings, booleans, enumerated types, named constants, and arrays, as well as advice on creating user-defined types. The focus is on avoiding common errors and improving code clarity, reliability, and maintainability.
+
+**Key concepts covered:**
+
+1.  **Numbers in General:**
+    *   Avoid **magic numbers** (unexplained literal numbers); use named constants instead for readability and easier changes. (0 and 1 are often acceptable exceptions).
+    *   Anticipate and prevent **divide-by-zero** errors.
+    *   Make **type conversions** explicit.
+    *   Avoid **mixed-type comparisons**.
+    *   Eliminate all **compiler warnings**.
+
+2.  **Integers:**
+    *   Be mindful of **integer division** (e.g., `7/10` is often 0, not 0.7). Reorder expressions to perform divisions last if necessary.
+    *   Check for potential **integer overflow**, both in final results and intermediate calculations. Use larger integer types (e.g., 64-bit) or floating-point types if needed. Consider future growth.
+
+3.  **Floating-Point Numbers:**
+    *   Recognize that representation is often **inexact** (e.g., 1/3 cannot be represented perfectly).
+    *   Avoid operations on numbers with **greatly different magnitudes** (e.g., 1,000,000 + 0.1 might just equal 1,000,000). Sort numbers before summing if necessary.
+    *   Avoid **equality comparisons** (`==`) due to representation inaccuracies (e.g., 0.1 added 10 times might not exactly equal 1.0). Check if numbers are within an acceptable tolerance instead.
+    *   Anticipate and mitigate **rounding errors** (e.g., use higher precision types, Binary Coded Decimal (BCD), or scaled integers like storing currency as cents).
+    *   Use language/library support for specific types (like `Currency`).
+
+4.  **Characters and Strings:**
+    *   Avoid **magic characters and strings**; use named constants or resources for easier changes, localization, and better readability.
+    *   Watch for **off-by-one errors** when indexing strings.
+    *   Decide on a **Unicode strategy** early if needed for internationalization.
+    *   Decide on a **consistent string conversion strategy** if using multiple types.
+    *   **C Strings:** Be careful with pointer vs. array distinctions, declare arrays as `CONSTANT+1` but use `CONSTANT` in operations, initialize strings to nulls, prefer arrays over pointers if possible, use `strncpy()` etc. over `strcpy()` etc.
+
+5.  **Boolean Variables:**
+    *   Use them to **document** and **simplify** complex conditional tests by assigning meaningful names to sub-expressions.
+    *   Use common names like `done`, `error`, `found`, `success`, `ok`.
+    *   Names should clearly imply true/false (e.g., `error` not `status`). Consider `is` prefixes (`isDone`).
+    *   Use *positive* names (`found`) rather than negative ones (`notFound`).
+    *   Create your own boolean type (e.g., using `typedef` or `enum` in C) if the language lacks one.
+
+6.  **Enumerated Types:** (Available in C++, VB; can be simulated elsewhere)
+    *   Use for **readability**, **reliability** (compiler checks), and **modifiability** instead of mapping arbitrary numbers to meanings (e.g., `Color_Red` instead of `1`).
+    *   Good for parameters.
+    *   Can be a better alternative to booleans when more than two states are needed (e.g., `Status_Success`, `Status_Warning`, `Status_FatalError`).
+    *   Always check for invalid values (e.g., in `else` or `default` clauses).
+    *   Can define `_First` and `_Last` elements for loop limits (use consistently).
+    *   Consider reserving the first value (often 0) as `_Invalid`.
+
+7.  **Named Constants:**
+    *   Use instead of literals to improve readability and maintainability (single-point control).
+    *   Use even for "safe" literals (like 12 for months) if it improves clarity (`NUM_MONTHS_IN_YEAR`).
+    *   Use consistently (don't mix constants and literals for the same entity).
+    *   Simulate if the language lacks direct support.
+
+8.  **Arrays:**
+    *   Ensure indexes are always **within bounds**.
+    *   Consider containers or sequential access as alternatives to random access.
+    *   Check **endpoints** carefully (first element, last element, off-by-one errors).
+    *   Ensure **multidimensional subscripts** are in the correct order.
+    *   Avoid **index cross-talk** in nested loops (use meaningful index names).
+    *   In C, consider using an `ARRAY_LENGTH()` macro.
+
+9.  **Creating Your Own Types (Type Aliasing):** (e.g., `typedef` in C/C++, `Type` in Pascal)
+    *   Powerful way to insulate the program from specific underlying types (e.g., `typedef float Coordinate;`).
+    *   Makes modifications easier (change type definition in one place).
+    *   Improves readability and self-documentation (`Coordinate x` vs. `float x`).
+    *   Use functionally oriented names (what it *is*), not names based on the underlying type (`BigInteger`).
+    *   Avoid redefining predefined types.
+    *   Define substitute types for portability if needed (e.g., `INT32`).
+    *   Consider creating a full class instead if more abstraction/control is needed.
+
+In essence, the chapter is a detailed guide to using basic data types correctly and safely. It emphasizes replacing "magic" literals with named entities (constants, enums), being aware of the specific pitfalls of numeric types (division, overflow, rounding, comparison), handling strings carefully, using booleans and enums to improve clarity, and leveraging user-defined types for abstraction and maintainability.
+
+### Chapter 13. Unusual Data Types
+
+This chapter addresses data types and structures that are less common in pure object-oriented programming or require special handling due to their complexity or potential for misuse: **structures, pointers, and global data**. It provides guidelines for using them safely and effectively when their use is warranted.
+
+**Key concepts covered:**
+
+1.  **Structures:** (Refers to C/C++ `struct`, VB `Structure`, or data-only classes)
+    *   **When to Use:** Although classes are generally preferred (offering privacy and functionality), structures can be useful to:
+        *   **Clarify data relationships:** Bundle related items together, making it clear which variables belong together (e.g., grouping employee details).
+        *   **Simplify operations on data blocks:** Allow operating on the whole structure (copying, swapping) instead of individual elements, reducing code and maintenance effort.
+        *   **Simplify parameter lists:** Pass a single structure instead of numerous individual variables (but don't over-bundle or pass the whole structure if only a few fields are needed).
+        *   **Reduce maintenance:** Changes to the structure (adding/removing fields) have less impact on code that treats the structure as a whole.
+    *   **Consider Classes:** Always consider if a class (with private data and methods) would be a better, more encapsulated alternative.
+
+2.  **Pointers:** (Acknowledges they are absent in some modern languages like Java/C# but understanding them is still valuable)
+    *   **Inherent Complexity:** Pointers are error-prone, hard to debug (symptoms often unrelated to cause), can lead to memory corruption and security vulnerabilities (like buffer overruns).
+    *   **Understanding Pointers:** A pointer has two parts: a memory address and the knowledge (base type) of how to interpret the data at that address.
+    *   **General Tips (Defensive Programming for Pointers):**
+        *   Isolate pointer operations in routines or classes.
+        *   Declare and define/initialize pointers simultaneously and close to use.
+        *   Delete pointers at the same scoping level where allocated.
+        *   Check pointers (for valid address range) and the data they reference (for reasonable values) before use.
+        *   Use "dog tags" (extra fields) or redundant data to detect memory corruption.
+        *   Use extra pointer variables for clarity in complex operations (like linked list insertions) rather than complex pointer expressions (`p->q->r...`).
+        *   Draw pictures to understand pointer operations.
+        *   Delete linked list pointers in the correct order (next before current).
+        *   Allocate a "memory parachute" to allow graceful shutdown if memory runs out.
+        *   Overwrite ("shred") memory with junk data before deallocation to expose dangling pointer errors more consistently.
+        *   Set pointers to `NULL` after deleting/freeing them to make dangling pointer writes crash predictably.
+        *   Check for null/invalid pointers before attempting deletion.
+        *   Keep track of allocated pointers to prevent double-deletion.
+        *   Centralize pointer management in wrapper routines (e.g., `SAFE_NEW`, `SAFE_DELETE`).
+        *   Use non-pointer techniques if feasible alternatives exist.
+    *   **C++ Specifics:** Understand pointer vs. reference differences; use pointers for modifiable "pass by reference" and `const` references for non-modifiable "pass by value" of objects; use `auto_ptr` and consider smart pointers.
+    *   **C Specifics:** Use explicit pointer types; avoid type casting; understand the asterisk rule for parameter passing; use `sizeof()`.
+
+3.  **Global Data:** (Accessible anywhere in a program)
+    *   **Common Problems:** Hard to manage complexity (breaks modularity); risk of inadvertent changes (side effects); aliasing problems; difficult re-entrant/multithreaded code; hinders code reuse; uncertain initialization order.
+    *   **Reasons Sometimes Used (Often Better Alternatives Exist):** Preserving global state; emulating named constants/enums in limited languages; streamlining access to *extremely* common data (rarely justified); eliminating tramp data.
+    *   **Use Only as Last Resort:** Start local, make class-scope if needed, only go global if absolutely necessary.
+    *   **Using Access Routines Instead:** This is the *preferred alternative* to direct global variable use. Hide global data within a class (or module) and provide access routines (`Get()`, `Set()`). This provides centralized control, allows barricading/validation, offers information hiding benefits, is easily convertible to an ADT/class, supports locking for concurrency control (esp. during development), and enables a higher level of abstraction. Keep accesses at the same abstraction level.
+    *   **Reducing Risks (If Globals Are Unavoidable):** Use clear naming conventions (e.g., `g_`); document all globals; don't use them for intermediate results; don't disguise them in "monster objects."
+
+In essence, the chapter advises extreme caution with pointers and global variables due to their inherent risks and complexity. It strongly recommends isolating their use within classes or access routines. Structures are presented as a simpler, sometimes useful alternative to classes for grouping data, but classes are generally preferred for better encapsulation and functionality. The overarching theme is to use these "unusual" data types only when necessary and, when used, to employ rigorous defensive programming techniques to mitigate their risks.
