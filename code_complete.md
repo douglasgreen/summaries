@@ -227,3 +227,57 @@ The process itself involves a few key activities, usually done in order:
 Now, the PPP isn't the only way to build routines. The chapter mentions other techniques like Test-First Development (writing tests before code) or Design by Contract.
 
 But the main idea of Chapter 9 is that having a systematic process like the PPP, especially using pseudocode well, can make constructing routines much smoother, less error-prone, and easier to manage than just jumping straight into coding and hoping for the best.
+
+## Part III. Variables
+
+### Chapter 10. General Issues in Using Variables
+
+Now we're diving into Chapter 10: General Issues in Using Variables.
+
+This chapter gets down to the real nuts and bolts of programming – how we handle the data, the variables we use every day. These might seem like small details, but getting them right makes a huge difference.
+
+First up, the chapter talks about **making declarations easy**. A key point here is avoiding 'implicit declarations' – where the language creates a variable for you if you forget to declare it. This feature, found in some older languages, is a major source of hard-to-find typo bugs! Always declare your variables explicitly.
+
+Then, a really crucial topic: **Initializing variables**. So many bugs happen because variables don't have the value you expect when you first use them! The best habit is to initialize a variable *right when you declare it*. If your language doesn't allow that, initialize it as close as possible to where you first use it. This makes the code clearer and safer, especially when code gets modified later. Pay special attention to initializing counters and accumulators, particularly inside loops.
+
+Next is **Scope**. Scope is about how 'visible' or 'famous' a variable is – where can it be accessed from? The most important guideline here is to *minimize scope*. Keep variables as local as possible. If a variable is only needed inside one loop, declare it there. If it's only needed inside one routine, keep it local to that routine. If it's only needed inside one class, make it a private member of that class. Avoid global variables whenever possible – they make programs much harder to understand and debug because anything anywhere can change them. Also related to scope is keeping the references to a variable close together in the code. Don't declare it at the top of a long routine if you don't use it until the bottom. This 'Principle of Proximity' makes code much easier to read and understand.
+
+The chapter touches briefly on **Persistence** – how long a variable 'lives'. Be careful not to assume a variable holds its value longer than it's supposed to.
+
+Another interesting idea is **Binding Time**. This refers to *when* a variable gets assigned its specific value. Is it fixed when you write the code (like using a 'magic number' – usually bad)? Is it set at compile time (like using a named constant – much better)? Or is it set when the program runs (like reading from a configuration file – more flexible, but also adds complexity)? The later the binding time, the more flexible the code, but often the more complex too. The key is to choose the binding time consciously based on what your program needs.
+
+Finally, a really important guideline: **Use each variable for exactly one purpose**. Don't reuse a temporary variable for two different calculations. Don't use 'magic values' where, say, a page count of -1 means an error occurred – that's confusing! Use a separate variable for the error status. Keep the meaning of each variable clear and singular. And as a related point, make sure every variable you declare actually gets used!
+
+So, Chapter 10 is all about building good habits for using variables: declare them explicitly, initialize them carefully near where they're used, keep their scope as small as possible, be aware of binding time, and make sure each variable has one, and only one, clear job."
+
+### Chapter 11. The Power of Variable Names
+
+Welcome to the summary for Chapter 11: The Power of Variable Names.
+
+This chapter is all about something fundamental but incredibly important: choosing good names for our variables, classes, and other things in our code. You might think it's a small detail, but good names are critical for making code understandable.
+
+The **most important rule** is that a name should **fully and accurately describe** what the variable represents. What does it *do*? What does it *mean*? Often, just stating that purpose in plain English gives you the best name. Think `employeeSalary` instead of `s` or `x`. Focus on the *what* (the problem you're solving) not the *how* (the programming details).
+
+What about **length**? Names shouldn't be too short like `x` or `n`, because that tells you nothing. But they also shouldn't be ridiculously long. Aim for clarity – usually names between about 8 and 20 characters work well, but the key is making sure the name is understandable.
+
+The **scope** of the variable matters too. For variables used only in a tiny loop (like a counter `i`), a short name *might* be okay because its purpose is obvious from the context. But for variables used more widely, or variables that live longer, you definitely need longer, more descriptive names.
+
+The chapter gives specific advice for naming different kinds of data:
+*   For **loop counters**, use descriptive names like `recordIndex` instead of just `i` if the loop is more than a couple of lines long or nested.
+*   Avoid generic **temporary** names like `temp`. Give the variable a name that reflects its actual, specific purpose, even if it's used briefly.
+*   For **boolean** variables (true/false), use names that clearly sound true or false, like `isComplete`, `found`, or `successOK`. Avoid vague names like `status`. Use positive names, like `found` instead of `notFound`.
+*   Name **constants** after the idea they represent (`MAX_ATTEMPTS`) not the literal number (`THREE`).
+
+A huge part of good naming is using **Naming Conventions**. These are agreed-upon rules for how names look. Why bother? Because conventions create consistency. They make code easier to learn and understand, reduce confusion (like using `pointTotal` in one place and `totalPoints` in another), and help make different parts of the code look familiar. Even a simple convention is usually better than none. A common convention might distinguish between local variables, class members, and global variables perhaps using prefixes like `m_` or `g_`.
+
+What about **abbreviations**? Modern languages usually let you use long names, so abbreviations are often unnecessary. If you *do* need to shorten names, be consistent! Don't remove just one letter. Document the abbreviations your project uses. And always remember: clarity for the reader is much more important than saving a few keystrokes when writing.
+
+Finally, the chapter lists **kinds of names to avoid**:
+*   Names that are misleading or ambiguous.
+*   Names that are too similar to each other (like `clientRecs` and `clientReps`).
+*   Names that sound alike but mean different things.
+*   Misspelled names (these are hard to remember!).
+*   Names that use confusing characters (like the number 1 and the letter l).
+*   Silly or irrelevant names.
+
+In short, Chapter 11 tells us that thoughtful, clear, and consistent naming is not a trivial detail – it's a cornerstone of writing readable, understandable, and maintainable code.
