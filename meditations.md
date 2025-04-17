@@ -393,3 +393,273 @@ Remember we're made for each other: teach or tolerate.
 The mind's movement isn't like a dart; it can be cautious and indirect yet still reach its goal.
 
 Understand others' minds, and let yours be understandable.
+
+## Book 9
+
+Book Nine starts by connecting injustice with impiety – being unholy or disrespectful towards the divine order. Marcus argues that the universe made rational beings to help each other, not harm each other. So, anyone who intentionally harms another goes against the will of Nature, the universal parent, and thus acts impiously.
+
+Similarly, lying is impious because Nature is truth, and lying fights against truth. Even lying unintentionally shows a disconnect from the natural order.
+
+Chasing pleasure as the ultimate good and avoiding pain as the ultimate evil is also impious. Why? Because Nature distributes pleasure and pain, honor and dishonor, life and death *indifferently* to both good and bad people. To live according to Nature, we should also view these external things as indifferent, not getting upset when 'good' people suffer or 'bad' people prosper in worldly terms. Fearing pain or craving pleasure leads people to act unjustly, which again, is impious.
+
+Marcus says it would be great to die having lived free from deceit, self-indulgence, and pride. But if not, it's better to leave life joyfully, tired of those vices, than to cling to a wicked life. He asks himself: Hasn't experience taught you yet to flee this "plague" of the mind, which is far worse than any physical disease?
+
+He advises accepting death calmly, as a natural process like aging, teething, or giving birth. It’s just another of Nature's operations. Don't be violent or proud about it; just wait patiently. A helpful thought against the fear of death is to consider the flawed people and opinions you'll be leaving behind. Living with people who don't share your understanding can be exhausting.
+
+He repeats: Sin harms the sinner, making them worse. Even *omitting* a good action can sometimes be unjust.
+
+Focus on the present: Is my understanding right? Is my action charitable? Am I content with what comes from the divine order? If yes, that's enough.
+
+Keep your mind clear: Wipe away distracting fantasies, control desires, stay focused.
+
+He emphasizes unity: Just as there's one earth, one light, one air, there's one rational soul shared among all rational beings. Things of the same nature naturally tend towards each other – earth to earth, water to water. Rational beings should feel this pull towards community even more strongly. It's strange and unnatural that humans are the only beings who forget this mutual affection and try to isolate themselves. But Nature ultimately prevails.
+
+Reason bears fruit, both for the community and for the individual.
+
+If people do wrong, try to teach them better. If you can't, remember that you were given mildness precisely to bear with them patiently. Even the gods help flawed people with things like health and wealth – can't you be patient too?
+
+Work without complaining, not seeking pity or admiration. Just aim to act or refrain from acting as social reason requires.
+
+Trouble isn't "out there"; it's in your opinions "in here". Cast out the opinions, and you find peace.
+
+Everything is ordinary, fleeting, and often based on base matter. Things are the same now as they were for generations past.
+
+Things themselves don't judge; our understanding does. Virtue and vice are in actions, not feelings. A good person's good isn't in feeling good, but in doing good.
+
+A stone thrown up isn't harmed when it falls, nor benefited when it rises. It's indifferent, like fame or death should be to us.
+
+Look inside the minds of those whose judgment you fear. You'll see they don't even judge themselves reliably.
+
+Everything is changing. You are changing. The whole world is. Accept it.
+
+Another person's sin is their problem, not yours. Let them deal with it.
+
+Consider the 'deaths' you've already experienced – passing from childhood to youth, youth to adulthood. These changes weren't causes for grief. The final cessation of life is just another change, another ending. Don't grieve it.
+
+When facing difficulties, quickly turn your mind to your own understanding (to ensure justice), the universe's understanding (remembering you're a part), or the other person's understanding (considering their ignorance or knowledge, and that they're your kin).
+
+Every action should aim towards the perfection of the community, like a member working for the good of the whole body. Actions not serving the common good are disorderly, even seditious.
+
+Don't get caught up in drama – it's like children's squabbles. Focus on the underlying cause of things, bare and naked. Consider how long things last.
+
+You cause yourself misery by not being content with your own rational nature operating as it should.
+
+When people criticize or hate you, look into *their* minds. You'll likely see no reason to be troubled by their opinions. Love them anyway; they are naturally your friends. Even the gods help them.
+
+Worldly affairs repeat in cycles. Either the universe deliberates on each event (so trust its wisdom), or it set everything in motion initially (so accept the necessary consequences). Either God exists and things are ultimately well, or it's all chance, in which case you can still use your own reason to navigate.
+
+The earth will cover everyone soon, then the earth itself will change, and so on eternally. Contemplating this vastness helps us despise fleeting worldly things.
+
+Don't expect a perfect utopia (Plato's commonwealth). Be content with small progress. True philosophy is simple and modest, not about showing off like swaggering kings.
+
+Look down on the world from a height: see the flocks, armies, farms, marriages, deaths, courts, markets – the whole chaotic mix. Realize how many people don't know you, will forget you, or might soon slander you after praising you. Fame and honor are worthless. The only goal is to accept what God sends contentedly and act justly towards others.
+
+Cut off unnecessary opinions that cause you trouble; you'll gain mental space.
+
+Understand the vastness of time before and after your short life. Realize that everything perishes quickly. An old person and a young person reach the same end in death.
+
+Recognize the changeable and often base nature of material things – marble is just earth, clothes are sheep hair and shellfish blood, life is an exhalation.
+
+Stop complaining. What's new? The cause or the matter? Nothing else matters. Be simpler and better towards the divine.
+
+Whether someone has sinned is their concern. Perhaps they haven't in the way you think.
+
+Either things happen by reasoned Providence (so don't complain if it serves the whole) or by random atoms (so why worry?).
+
+Don't address your rational soul as if it's dead or corruptible like the body.
+
+Pray not for worldly things or avoidance of them, but for freedom from fear and desire concerning them. Pray for patience with difficult people, not their removal. Pray not to fear loss. Try this kind of prayer.
+
+Follow Epicurus's example: even in sickness, keep your mind focused on philosophy and its own happiness, independent of the body.
+
+Focus on the task at hand, like any craftsperson.
+
+When annoyed by someone's impudence, remember impudent people *must* exist in the world. This person is just one of them. Consider what virtue Nature gave you to counter this vice (like meekness against unthankfulness). You can try to instruct the person. Realize they act from ignorance. Remember you're not truly harmed unless your mind is made worse. Blame yourself if you expected better from someone clearly flawed, or if you did good seeking a reward beyond the act itself. Doing good is its own reward, the fulfillment of your nature.
+
+## Book 10
+
+We've reached Book Ten, the final part of Marcus Aurelius's personal reflections. He starts with a hopeful address to his own soul.
+
+He looks forward to a time when his soul will be truly good, simple, and clear, not weighed down by worldly desires or the needs of the body. He imagines a future state of perfect contentment, needing nothing external, fully aligned with the divine order that creates and sustains everything.
+
+He then brings himself back to the present, focusing on practical steps: Understand what your nature requires – first as a living creature, then as a rational and social being. Stick to what's reasonable and sociable, and don't worry about pointless things.
+
+He reminds himself about endurance: You're naturally equipped to bear whatever happens. If you can bear it, don't complain; just bear it. If you truly can't bear it, don't worry either – it will end soon, along with you. Remember, your *opinion* about whether something is profitable or aligned with duty often determines if you *can* bear it.
+
+When dealing with people who do wrong, try to teach them gently. If that doesn't work, blame yourself for failing – or perhaps don't even blame yourself if you genuinely tried your best.
+
+Accept everything that happens as part of your unique destiny, woven into the fabric of the universe from the very beginning.
+
+He reinforces the idea of being part of the whole universe, governed by Nature or Providence. As a part, don't be displeased with your share of events, because what benefits the whole can't truly harm the part. Think of your kinship with other rational beings and always act for the common good. Living this way brings happiness.
+
+He tackles the idea of "corruption" again, preferring the term "alteration." Change is natural and necessary for all parts of the universe. It's not evil. Things dissolve back into their elements, nothing is lost, and the universe renews itself. Don't get attached to your current physical substance; it's constantly changing anyway.
+
+Marcus lists several virtuous "names" or qualities he aspires to: Good, Modest, True, Rational, Congruent (meaning consistent or harmonious), and Magnanimous (meaning having a great spirit, above petty concerns). He tells himself to live up to these. If he slips, return quickly. Remember the gods want us to become like them by fulfilling our true human nature, just as a fig tree fulfills its nature.
+
+He warns against the "daily slavery" of pointless routines, anxieties, wars, and dullness. These can erase important principles from the mind. Combine action with contemplation. Understand the true nature of things while acting effectively.
+
+He criticizes the pursuit of empty achievements, comparing even military victories to spiders catching flies or hunters catching prey if done without higher purpose.
+
+Actively contemplate the constant change of all things into one another – this builds true greatness of spirit (magnanimity).
+
+Imagine someone nearing death who has let go of the body and worldly concerns. Their focus is solely on acting justly and accepting whatever Providence sends, without worrying about others' opinions or actions.
+
+Don't waste time on suspicion or worry about the future. Focus on discerning what's right *now* and doing it. If you need help figuring it out, seek advice. Go forward with prudence, aiming for justice.
+
+Follow reason as your guide in all things – it can be both quick and cautious, both merry and grave.
+
+When waking up, ask yourself if doing what's right is the important thing, regardless of whether you or someone else does it. Don't worry about pleasing people whose own lives and opinions are flawed and inconsistent.
+
+Learn humble submission to the divine will, like someone saying to God, "Give what You will, take away what You will," not out of defiance, but out of love.
+
+Live as if you were alone on a hill – your inner state is what matters, not the location. Be a true example of a human living according to nature. If others can't tolerate it, better to die than compromise your integrity.
+
+Don't just talk about what a good person is – actually *be* one.
+
+Continuously contemplate the vastness of time and substance, seeing individual things as tiny seeds, lasting only for a moment, constantly dissolving and changing. Consider the lives of others – eating, sleeping, striving, chiding – and how quickly death ends it all.
+
+What Nature sends is always best for the individual at that time. Love whatever happens.
+
+Life is either familiar and tolerable, or you can choose to leave it, or death will end it. Find comfort in this. Solitude doesn't change the fundamental nature of things; you can find truth anywhere by looking within.
+
+Don't be a fugitive from the universal law by being sorry, angry, or afraid about appointed events.
+
+Contemplate the hidden powers behind natural processes like growth and digestion. See the invisible power as clearly as visible causes.
+
+History repeats itself. Past lives and courts resemble the present. All worldly things are like smoke, vanishing away. What matters is passing your short time virtuously.
+
+Turn troubles into fuel for your mind, like a strong stomach digests any food or a fire consumes any fuel.
+
+Strive to be genuinely simple and good. Let anyone who thinks otherwise be mistaken. Your integrity depends on you. Find pleasure in acting according to your nature, which you can do anywhere. Your mind, unlike physical objects, can pass through obstacles.
+
+Nothing can truly hurt a citizen that doesn't hurt the community/law itself. External misfortunes don't damage the law of nature or justice.
+
+Use short sayings or observations as reminders – like falling leaves reminding you of human generations. Your children, your admirers, your critics – all are like leaves, here briefly then gone. Why crave permanence? Soon your eyes will close, and others will mourn your mourners.
+
+A healthy understanding should be ready for anything, just as a good eye sees all colors, not just green. Don't wish only for pleasant things, like wanting only your children to live or only to be praised.
+
+Anticipate that even loved ones might be relieved by your death. Accept this without bitterness, remain kind, but let it make departure easier. Part from life readily, as a natural separation.
+
+When observing others, ask, "What is their goal?" But start with yourself – examine your own actions and motives first.
+
+Remember that the hidden inner principles (dogmata/opinions) are what truly drive actions and constitute the person, not the external body or its tools.
+
+## Book 11
+
+Book Eleven dives into the unique powers and duties of the rational soul.
+
+Marcus starts by listing its special abilities: It can see itself, shape itself, make itself what it wants to be, and enjoy its own fruits (unlike plants or animals, whose fruits benefit others). Crucially, the soul can complete its purpose regardless of when life ends. It's not like a dance or play cut short; whenever death comes, the soul can say, "I have fulfilled what was mine to do." It can also grasp the vastness of the universe and time, understanding the cycles of eternity and realizing that past and future generations see essentially the same things.
+
+A key property of the soul is loving its neighbor, being truthful and modest, and valuing itself above all – which aligns perfectly with the universal Law, meaning reason and justice are fundamentally connected.
+
+He suggests a technique for overcoming desires: Analyze things you enjoy, like music or sports, by breaking them down into their smallest parts. Ask yourself if any single sound or movement is truly captivating on its own. Usually, it's not. This dissection helps you see the whole thing more clearly and lessens its power over you. Apply this analytical approach to your whole life.
+
+He praises the soul that's always ready to depart the body, whether through extinction, dispersion, or moving to another state. But this readiness shouldn't come from stubbornness or a desire for opposition (he specifically contrasts this with the Christians of his time), but from calm, rational judgment and dignity.
+
+A recurring theme: Doing good benefits the doer. Your core "profession" is simply to be good. This requires understanding the universe and human nature.
+
+He reflects on the purpose of drama. Tragedy reminds us of life's natural difficulties and teaches acceptance. Ancient comedy used satire to curb pride. Later comedies focused more on imitation. All can contain some wisdom.
+
+He asks himself: Isn't the life you're living right now the perfect life for practicing philosophy?
+
+He uses the analogy of a branch cut from a tree. A person separating from another cuts themselves off from the whole community. But unlike a branch, a person has the merciful possibility, thanks to the divine Author of society, to rejoin the whole. However, repeated separation makes reunion harder. Strive to grow together with others in affection, even if you differ in opinions.
+
+Don't let opposition stop you from acting right or from being kind to opponents. To fail in either – action or kindness – is cowardly.
+
+Nature is superior to art, as arts imitate nature. The universal Nature, being most perfect, works skillfully, always making the worse serve the better. This is the basis of justice, from which other virtues flow. Justice requires indifference to worldly things and avoiding error or rashness.
+
+Things themselves don't trouble you; you go to them with your opinions. Let your judgments rest, and the things will stand quiet. Then your pursuit and avoidance will cease.
+
+The soul should be like a perfect sphere, unified and shining with light, understanding the truth of itself and the universe.
+
+If someone contemns or hates you, let them worry about their reasons. Your job is to be kind and loving, ready to gently show them their error, like Phocion did. Act rightly for your own nature's sake, ensuring your inner self is pure and free from indignation, visible to the gods who see within.
+
+People seek approval from those they despise, debasing themselves while chasing status. How contradictory!
+
+Be genuinely sincere and simple. Your character should be obvious, written on your forehead, unmistakable like the look in a lover's eyes or even the smell of someone with body odor. Avoid *affecting* simplicity – insincere friendship is shameful.
+
+Happiness is an inner power, achieved through indifference to indifferent things. Understand objects by analyzing them, remembering they don't force opinions on you – you create the opinions. You can choose not to create them or to wipe them away. This focus lasts only for your short life. If things align with nature, enjoy them. If not, pursue your own nature's good without shame.
+
+Consider where things come from, what they're made of, and what they'll change into. To avoid being troubled by others' flaws: Remember your connection to them, that we're born for each other. Think about who they are – their limited views, their forced actions. Realize they often act from ignorance (no soul willingly errs). Recognize your own flaws. Understand you might not know the whole story behind their actions. Remember life is short. Realize it's your *opinion* about their actions, not the actions themselves, that troubles you; change the opinion. Understand that anger and grief often cause more harm than the original offense. Practice genuine, unconquerable meekness – teach offenders gently, without scorn. Remember these "nine gifts" plus a tenth: It's impossible for wicked people not to exist, so accept their existence, but don't tolerate wickedness against yourself without trying to correct it if possible – that's tyrannical.
+
+Watch out for four mental pitfalls: unnecessary imagination, uncharitable thoughts, speaking insincerely (like a puppet), and letting your divine part be enslaved by the body's desires.
+
+Your rational part should be obedient to the universal order, just like the physical elements are, even if it seems counterintuitive. Disobedience (injustice, fear, sorrow) is a separation from Nature.
+
+Have a single, consistent life goal: the common, social good. This brings uniformity to your actions.
+
+Remember fables like the city mouse and country mouse, highlighting fear and anxiety. Socrates called common opinions "bugbears" – things that frighten children.
+
+Learn from ancient examples: The Spartans giving shady seats to strangers. Socrates refusing Perdiccas's invitation to avoid being unable to repay kindness. Keeping ancient worthies in mind (Ephesians). Looking to the heavens for order and purity (Pythagoreans). Socrates' humble attire.
+
+Life requires learning, just like reading or writing. We're born slaves to senses without teaching.
+
+Find inner joy ("My heart smiled within me"). Endure slander ("They will accuse virtue herself"). Accept natural changes, like longing for figs in winter or children before they arrive.
+
+Recognize that changes, like grapes ripening then drying, are transformations into different states of being, not non-being.
+
+Follow Epictetus: Master the art of assent (agreeing only with true judgments). Watch your inclinations – keep them restrained, charitable, and value things appropriately. Avoid intense longing; use aversion only for things truly within your control (your vices). The real struggle isn't over petty things, but whether to be mad with the crowd or sober with philosophy.
+
+Follow Socrates: Seek sound reason. Why argue if you possess it?
+
+## Book 12
+
+We've arrived at Book Twelve, the last chapter.
+
+He starts with a strong message of hope and empowerment: You can achieve the peace and goodness you hope for *right now*. How? By letting go of the past, trusting divine Providence for the future, and focusing completely on being holy and just in the *present*. Holiness means willingly accepting whatever fate sends. Justice means speaking truth and acting rightly. Don't let others' negativity, opinions, or even your own body's sensations derail you. Fear not the end of life, but fear never truly *beginning* to live according to nature.
+
+He reminds himself that God sees our minds directly, bare and naked, without physical clutter. We should strive to do the same – focus on our mind, the only part truly ours. Separate it from others' actions, past regrets, future worries, bodily concerns, and external events. Let the mind live freely, justly, accepting what happens, speaking truth. Be self-contained like Empedocles' perfect sphere, living fully in the present moment.
+
+He notes a curious human contradiction: We love ourselves most, yet we care more about what others think of us than our own judgment. We wouldn't dare speak all our inner thoughts aloud.
+
+He tackles the question of the afterlife for good people. If they aren't restored to life, trust that the perfectly good and just Gods had a reason that aligns with the universe's overall fitness. If it were better otherwise, Nature could have handled it. Since it's not that way, accept it was not meant to be.
+
+He encourages practicing even things we think we're bad at. Like the less-used left hand becoming strong holding the reins through practice, we can develop skills and virtues we thought we lacked.
+
+Meditate on key themes: What we should be like when death comes; life's shortness; time's immensity; the frailty of material things (seeing them stripped bare); causes and purposes of things; the true nature of pain, pleasure, death, and fame; how our own tranquility comes from within; how others can't truly hinder us; and that external difficulties are often just matters of opinion.
+
+Use your principles actively, like a skilled fighter or wrestler who always has their hands ready, not like a gladiator who is helpless if disarmed.
+
+Analyze things by breaking them down into their matter, their form or structure, and their purpose or end.
+
+Man's greatest power is the ability to do only what God approves and to accept contentedly whatever God sends.
+
+Don't blame anyone for natural events – not the gods (who don't err) nor humans (who err mainly through ignorance).
+
+It's silly to be surprised by the ordinary, natural events of life.
+
+Face the possibilities: Life might be governed by unavoidable necessity (so don't resist), flexible Providence (so make yourself worthy of help), or random chaos (so be glad you have reason to guide yourself). Even if chaos seems to prevail externally, your mind, like the light of a candle, can hold onto truth and justice until the very end.
+
+When thinking about someone else's wrongdoing, question if it's truly a sin as perceived. Perhaps they've already condemned themselves. Remember that certain behaviors are as natural to some people as neighing is to a horse. Try to remedy it if you can.
+
+Keep your actions and words aligned with what's fitting and true. Always keep your own purpose free.
+
+Unfold the nature of everything you encounter: its form, matter, purpose, and duration.
+
+Recognize the divine spark within you, superior to passions. Aim all actions towards the common good. Everything changes and ends quickly.
+
+Remember, opinion is the root of disturbance. Remove the opinion ("This is terrible"), and you remove the disturbance. Find calm within, like a ship safe in harbor.
+
+Actions and lives ending are not inherently evil. Death itself isn't shameful or evil; it's natural, necessary for the renewal of the whole universe, and part of the divine order. Accept it as good because it serves the whole.
+
+Keep three thoughts ready: 1) Act justly. 2) Accept external events peacefully, whether chance or providence. 3) Understand the transient nature of bodies and the world. Look down from a height and see the vanity of earthly things.
+
+You are safe when you cast away negative opinions. Remember universal nature, human kinship through shared mind, the divine source of mind, nothing being truly "yours," and living only in the present instant.
+
+Think about people consumed by strong passions or ambitions – where are they now? Smoke and dust. Worldly pursuits are often vile. Follow the gods with simplicity, justice, and moderation. Avoid the pride of *thinking* you're not proud.
+
+Know the gods exist through experiencing their power and providence daily, just as you know your own soul exists without seeing it.
+
+Life's happiness consists in knowing the true nature of things, acting justly, speaking truth, and enjoying a continuous flow of good actions.
+
+Recognize the unity of all things: one sunlight, one substance, one soul, one intellectual mind connecting all rational beings. Desire this unity.
+
+What's truly worth desiring? Not long life or sensory experiences, but following God and Reason.
+
+Contemplate your tiny portion of infinite time, substance, and space. Value only acting according to your nature and accepting what universal nature provides.
+
+Your understanding is key. Everything else is outside your will – like smoke.
+
+Even those who valued pleasure often learned to face death bravely. How can death be terrible if only what's natural and seasonable is good?
+
+You're a citizen of the world-city. Your time here, long or short, has been according to its laws. Nature, not a tyrant, dismisses you from the stage when your part is played. Three acts can make a whole play in life. The director decides the length, not you. Depart contentedly, because the One dismissing you is content.
